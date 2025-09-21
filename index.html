@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Solutions by Ujjwal Pandey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .answer.active {
+            max-height: 1200px; /* Increased max-height for long content */
+            padding-top: 1rem;
+            padding-bottom: 1.5rem;
+            transition: max-height 0.5s ease-in, padding 0.5s ease-in;
+        }
+        .question-btn svg {
+            transition: transform 0.3s ease;
+        }
+        .question-btn.active svg {
+            transform: rotate(180deg);
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        /* Modal styles */
+        .modal-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="flex flex-col min-h-screen">
+        <!-- Header -->
+        <header class="bg-white shadow-md sticky top-0 z-20">
+            <div class="container mx-auto px-4 py-4">
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-900 text-center">Assignment Solution by Ujjwal Pandey</h1>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <h2 class="text-xl md:text-2xl font-semibold mb-6 text-center text-gray-700">ITWD Assignment Questions & Answers</h2>
+            <div id="qa-container" class="space-y-4 max-w-4xl mx-auto">
+                
+                <!-- Q&A 1 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>1. What is JavaScript? Explain its importance as a client-side scripting language.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="answer px-6 text-gray-700"><p>JavaScript (JS) is a high-level scripting language and a core technology of the web, alongside HTML and CSS. As a client-side language, it runs in the user's browser, making web pages interactive. Its importance lies in creating dynamic content, validating forms before server submission, and manipulating the page's structure (DOM) without reloading. It also fetches data asynchronously (AJAX). This provides immediate feedback and a responsive user experience, making web applications feel more like native desktop apps. It's the engine that powers modern, interactive websites.</p></div>
+                </div>
+
+                <!-- Q&A 2 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>2. Differentiate between JavaScript and HTML in web development.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="answer px-6 text-gray-700"><p>HTML and JavaScript have distinct roles. HTML (HyperText Markup Language) is the skeleton of a webpage, defining its structure and content with tags for headings, paragraphs, and images. It's a markup language, not for logic. In contrast, JavaScript is a programming language that provides interactivity and behavior. It's the "muscle" that makes the page dynamic. While HTML creates a static page, JavaScript can change that page's content, validate forms, and react to user actions like clicks. Think of HTML as the noun (the structure) and JavaScript as the verb (the action).</p></div>
+                </div>
+
+                <!-- Q&A 3 -->
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>3. Explain different data types, variables and constants in JavaScript.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="answer px-6 text-gray-700"><p>JavaScript has primitive data types like <code>String</code> (text), <code>Number</code> (numeric), <code>Boolean</code> (true/false), <code>null</code>, and <code>undefined</code>. `Object` is a complex type for data collections. Variables are containers for this data, declared with <code>var</code> (old, function-scoped), <code>let</code> (block-scoped, can be changed), or <code>const</code> (block-scoped, cannot be changed). For example, <code>let age = 25;</code> creates a variable that can be updated, while <code>const PI = 3.14;</code> creates a constant value. Using `let` and `const` is the modern standard for predictable code.</p></div>
+                </div>
+
+                <!-- Q&A 4 -->
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>4. What are operators in JavaScript? Explain types with examples.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="answer px-6 text-gray-700"><p>Operators are special symbols that perform operations on values. Key types are: <strong>Arithmetic</strong> (`+`, `-`, `*`) for math; <strong>Assignment</strong> (`=`, `+=`) for setting values; <strong>Comparison</strong> (`==`, `===`, `>`) for comparing values; <strong>Logical</strong> (`&&` for AND, `||` for OR) for combining conditions; and the <strong>Ternary</strong> operator (`condition ? val1 : val2`) as a short if-else. These operators are fundamental for performing calculations, making decisions, and manipulating data in your code.</p></div>
+                </div>
+                
+                <!-- Q&A 5 -->
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>5. Explain operator precedence with a suitable example.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="answer px-6 text-gray-700"><p>Operator precedence determines the order of operations in an expression. For instance, multiplication (`*`) has higher precedence than addition (`+`). In `let result = 10 + 5 * 2;`, the multiplication `5 * 2` happens first, resulting in `10`. Then, `10 + 10` is calculated, making `result` equal to `20`. This is the same as the BODMAS rule in math. To override this default order, use parentheses. For example, `(10 + 5) * 2` would force the addition to happen first, resulting in `30`.</p></div>
+                </div>
+
+                <!-- Q&A 6 -->
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>6. What is type conversion in JavaScript? Differentiate between implicit and explicit conversion.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="answer px-6 text-gray-700"><p>Type conversion is changing a value from one data type to another. <strong>Implicit conversion (coercion)</strong> is automatic. For example, in `"5" - 2`, JavaScript converts the string `"5"` to the number `5` to perform subtraction, resulting in `3`. <strong>Explicit conversion</strong> is done manually by the programmer using functions like `Number("123")` to convert a string to a number, or `String(123)` to convert a number to a string. Explicit conversion is preferred as it makes the code's intent clear and helps avoid unexpected bugs from automatic coercion.</p></div>
+                </div>
+                
+                <!-- Q&A 7 -->
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>7. Explain the use of if-else statements in JavaScript with example.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="answer px-6 text-gray-700"><p>The `if-else` statement is a core control structure for making decisions. It executes a block of code if a condition is true, and a different block if it is false. You can chain multiple conditions with `else if`. For example: `let score = 85; if (score >= 90) { console.log('Grade A'); } else if (score >= 80) { console.log('Grade B'); } else { console.log('Grade C or lower'); }`. Since `85` is not `>= 90` but is `>= 80`, it prints 'Grade B'. This allows a program to follow different logical paths.</p></div>
+                </div>
+                
+                <!-- Q&A 8 -->
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>8. What is a Boolean object in JavaScript? Explain with example.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="answer px-6 text-gray-700"><p>A `Boolean` object is a wrapper around the primitive boolean values (`true` and `false`), created with `new Boolean()`. It is highly recommended to **avoid** using Boolean objects. The main issue is that any object in JavaScript, including `new Boolean(false)`, is considered "truthy." This means it will pass a conditional check, like `if (new Boolean(false)) { ... }`, which is highly confusing and a common source of bugs. Always use the primitive values `true` and `false` directly for clear, predictable, and error-free code.</p></div>
+                </div>
+                
+                <!-- Q&A 9 -->
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>9. Explain the concept of event handling in JavaScript with examples.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                     <div class="answer px-6 text-gray-700"><p>Event handling is responding to user actions (events) like clicks, key presses, or mouse movements. You attach a function, called an "event handler," to an HTML element. This function "listens" for a specific event. When that event occurs on the element, the handler function is executed. The modern way is with the `addEventListener()` method, like so: `button.addEventListener('click', function() { alert('You clicked me!'); });`. This separates your JavaScript logic from your HTML structure and is the standard practice for making interactive web pages.</p></div>
+                </div>
+
+                <!-- Q&A 10 (Code) -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>10. Write JavaScript code to handle an onclick event.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="answer px-6 text-gray-700">
+                        <p class="mb-4">To handle a click, you select an element and use `addEventListener` to run a function when it's clicked. This separates your page structure (HTML) from its interactive behavior (JavaScript).</p>
+                        <div class="bg-gray-800 rounded-lg"><div class="flex justify-between items-center px-4 py-2 bg-gray-700 rounded-t-lg"><span class="text-sm font-semibold text-gray-300">HTML & JavaScript</span><button class="copy-btn flex items-center gap-2 text-sm text-gray-300 font-semibold bg-gray-600 hover:bg-gray-500 px-3 py-1 rounded-md transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>Copy</button></div><pre class="p-4 text-white text-sm"><code class="language-html">&lt;!-- HTML --&gt;
+&lt;p id="message"&gt;Ye message badal jayega.&lt;/p&gt;
+&lt;button id="changeTextBtn"&gt;Click Me&lt;/button&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;script&gt;
+  const message = document.getElementById('message');
+  const button = document.getElementById('changeTextBtn');
+
+  button.addEventListener('click', function() {
+    message.textContent = 'Dekha! Text badal gaya!';
+    message.style.color = 'green';
+  });
+&lt;/script&gt;</code></pre></div>
+                        <div class="mt-4 border-t pt-4"><h4 class="font-semibold text-center mb-2 text-gray-600">Live Demo (Run)</h4><div id="demo-10" class="text-center bg-gray-50 p-4 rounded-lg"><p id="demo-message-10" class="mb-2">Ye message badal jayega.</p><button id="demo-btn-10" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors">Click Me</button></div></div>
+                    </div>
+                </div>
+
+                <!-- Q&A 11 (Code) -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>11. Write JavaScript code to validate a form for mandatory email field.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="answer px-6 text-gray-700">
+                        <p class="mb-4">To validate a form, you listen for its `submit` event, use `event.preventDefault()` to stop it, and then check the input. If validation fails, you show an error.</p>
+                        <div class="bg-gray-800 rounded-lg"><div class="flex justify-between items-center px-4 py-2 bg-gray-700 rounded-t-lg"><span class="text-sm font-semibold text-gray-300">HTML & JavaScript</span><button class="copy-btn flex items-center gap-2 text-sm text-gray-300 font-semibold bg-gray-600 hover:bg-gray-500 px-3 py-1 rounded-md transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>Copy</button></div><pre class="p-4 text-white text-sm"><code class="language-html">&lt;!-- HTML --&gt;
+&lt;form id="emailForm"&gt;
+  &lt;input id="emailInput" type="text" placeholder="Email daalein"&gt;
+  &lt;p id="emailError" style="color:red;"&gt;&lt;/p&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;script&gt;
+  const form = document.getElementById('emailForm');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Roko form submission
+    const email = document.getElementById('emailInput').value;
+    const error = document.getElementById('emailError');
+    if (email.trim() === '') {
+      error.textContent = 'Email daalna zaroori hai.';
+    } else {
+      error.textContent = 'Success!';
+      error.style.color = 'green';
+    }
+  });
+&lt;/script&gt;</code></pre></div>
+                         <div class="mt-4 border-t pt-4"><h4 class="font-semibold text-center mb-2 text-gray-600">Live Demo (Run)</h4><div id="demo-11" class="bg-gray-50 p-4 rounded-lg"><form id="demo-form-11" class="space-y-2"><input id="demo-email-11" type="text" placeholder="Email daalein" class="w-full p-2 border rounded"><p id="demo-error-11" class="text-sm h-5"></p><button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Submit</button></form></div></div>
+                    </div>
+                </div>
+
+                <!-- Q&A 12 -->
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>12. Explain the concept of JavaScript scope (local vs global) with examples.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="answer px-6 text-gray-700"><p>Scope determines the accessibility of variables. <strong>Global Scope:</strong> A variable declared outside any function is global; it can be accessed from anywhere. e.g., `let name = "Ujjwal";`. <strong>Local Scope:</strong> A variable declared inside a function is local; it's only accessible within that function. This prevents naming conflicts. With `let` and `const`, JavaScript also has <strong>Block Scope</strong>, meaning variables declared inside `{}` (like in an `if` block) are only accessible there. Using local and block scopes makes code more predictable and easier to debug.</p></div>
+                </div>
+
+                <!-- Q&A 13 (Code) -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>13. Write JavaScript code for a responsive modal form.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="answer px-6 text-gray-700">
+                        <p class="mb-4">A modal is a popup dialog. You create it with HTML/CSS (initially hidden) and control its visibility with JavaScript by adding/removing a class on button clicks.</p>
+                        <div class="bg-gray-800 rounded-lg"><div class="flex justify-between items-center px-4 py-2 bg-gray-700 rounded-t-lg"><span class="text-sm font-semibold text-gray-300">HTML & JavaScript</span><button class="copy-btn flex items-center gap-2 text-sm text-gray-300 font-semibold bg-gray-600 hover:bg-gray-500 px-3 py-1 rounded-md transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>Copy</button></div><pre class="p-4 text-white text-sm"><code class="language-html">&lt;!-- HTML --&gt;
+&lt;button id="openModalBtn"&gt;Open Form&lt;/button&gt;
+&lt;div id="myModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"&gt;
+  &lt;div class="bg-white p-5 rounded"&gt;
+    &lt;h3&gt;Modal Form&lt;/h3&gt;
+    &lt;p&gt;Ye ek modal hai.&lt;/p&gt;
+    &lt;button id="closeModalBtn"&gt;Close&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;script&gt;
+  const modal = document.getElementById('myModal');
+  const openBtn = document.getElementById('openModalBtn');
+  const closeBtn = document.getElementById('closeModalBtn');
+  openBtn.addEventListener('click', () =&gt; modal.classList.remove('hidden'));
+  closeBtn.addEventListener('click', () =&gt; modal.classList.add('hidden'));
+&lt;/script&gt;</code></pre></div>
+                         <div class="mt-4 border-t pt-4"><h4 class="font-semibold text-center mb-2 text-gray-600">Live Demo (Run)</h4><div class="text-center bg-gray-50 p-4 rounded-lg"><button id="demo-open-13" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">Open Modal Form</button></div></div>
+                    </div>
+                </div>
+                
+                <!-- Q&A 14 (Code) -->
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>14. Explain the use of onsubmit event in form handling.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="answer px-6 text-gray-700">
+                        <p class="mb-4">The `onsubmit` event fires on a `<form>` just before it submits. Its main purpose is validation. You use `event.preventDefault()` to stop the submission, check the data, and then either show an error or allow it to proceed. This prevents bad data from reaching the server.</p>
+                        <div class="bg-gray-800 rounded-lg"><div class="flex justify-between items-center px-4 py-2 bg-gray-700 rounded-t-lg"><span class="text-sm font-semibold text-gray-300">HTML & JavaScript</span><button class="copy-btn flex items-center gap-2 text-sm text-gray-300 font-semibold bg-gray-600 hover:bg-gray-500 px-3 py-1 rounded-md transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>Copy</button></div><pre class="p-4 text-white text-sm"><code class="language-html">&lt;!-- HTML --&gt;
+&lt;form id="passwordForm"&gt;
+  &lt;input id="passwordInput" placeholder="Password (min 6 chars)"&gt;
+  &lt;p id="passwordError" style="color:red;"&gt;&lt;/p&gt;
+  &lt;button type="submit"&gt;Register&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;script&gt;
+  const pForm = document.getElementById('passwordForm');
+  pForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const pass = document.getElementById('passwordInput').value;
+    const err = document.getElementById('passwordError');
+    if (pass.length &lt; 6) {
+      err.textContent = 'Password kam se kam 6 characters ka hona chahiye.';
+    } else {
+      err.textContent = 'Success!';
+      err.style.color = 'green';
+    }
+  });
+&lt;/script&gt;</code></pre></div>
+                         <div class="mt-4 border-t pt-4"><h4 class="font-semibold text-center mb-2 text-gray-600">Live Demo (Run)</h4><div id="demo-14" class="bg-gray-50 p-4 rounded-lg"><form id="demo-form-14" class="space-y-2"><input id="demo-pass-14" type="password" placeholder="Password (min 6 chars)" class="w-full p-2 border rounded"><p id="demo-error-14" class="text-sm h-5"></p><button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Register</button></form></div></div>
+                    </div>
+                </div>
+
+                <!-- Q&A 15 -->
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="question-btn w-full text-left p-4 flex justify-between items-center font-semibold text-blue-700 hover:bg-gray-50 rounded-lg focus:outline-none">
+                        <span>15. Explain the importance of form validation using JavaScript.</span>
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                     <div class="answer px-6 text-gray-700"><p>JavaScript form validation is vital for a good user experience (UX) and app efficiency. Firstly, it provides <strong>immediate feedback</strong> to users about errors, guiding them to fix mistakes without waiting for the server. This reduces user frustration. Secondly, it <strong>reduces server load</strong> by preventing submissions with obvious errors (like blank fields) from ever being sent. This saves server resources and bandwidth. While crucial for UX, remember that client-side validation is not a security measure. You must always perform server-side validation as well to protect against malicious users.</p></div>
+                </div>
+                
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white mt-8">
+            <div class="container mx-auto px-4 py-4 text-center">
+                <p>&copy; 2024 All rights are reserved to Ujjwal Pandey 24105127041.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Modal HTML for Demo 13 -->
+    <div id="demo-modal-13" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 modal-overlay">
+        <div class="modal-content bg-white p-6 rounded-lg shadow-xl w-full max-w-sm text-center transform scale-95">
+            <h3 class="text-xl font-bold mb-4">Modal Form</h3>
+            <p class="mb-4">Ye ek live demo modal hai.</p>
+            <button id="demo-close-13" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Close</button>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const qaContainer = document.getElementById('qa-container');
+            
+            qaContainer.addEventListener('click', function (e) {
+                // Accordion Logic
+                const questionBtn = e.target.closest('.question-btn');
+                if (questionBtn) {
+                    const answer = questionBtn.nextElementSibling;
+                    questionBtn.classList.toggle('active');
+                    answer.classList.toggle('active');
+                }
+
+                // Copy Button Logic
+                const copyBtn = e.target.closest('.copy-btn');
+                if (copyBtn) {
+                    const codeBlock = copyBtn.closest('.bg-gray-800').querySelector('code');
+                    const codeText = codeBlock.innerText;
+                    
+                    navigator.clipboard.writeText(codeText).then(() => {
+                        const originalContent = copyBtn.innerHTML;
+                        copyBtn.innerHTML = 'Copied!';
+                        setTimeout(() => {
+                           copyBtn.innerHTML = originalContent;
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Copy karne mein fail: ', err);
+                    });
+                }
+            });
+
+            // --- LIVE DEMO SCRIPTS ---
+
+            // Demo for Q10: onclick
+            const demoBtn10 = document.getElementById('demo-btn-10');
+            const demoMessage10 = document.getElementById('demo-message-10');
+            demoBtn10.addEventListener('click', () => {
+                demoMessage10.textContent = 'Dekha! Text badal gaya!';
+                demoMessage10.style.color = 'green';
+            });
+
+            // Demo for Q11: Email Validation
+            const demoForm11 = document.getElementById('demo-form-11');
+            demoForm11.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const emailInput = document.getElementById('demo-email-11');
+                const errorP = document.getElementById('demo-error-11');
+                errorP.style.color = 'red';
+                
+                if (emailInput.value.trim() === '') {
+                    errorP.textContent = 'Email daalna zaroori hai.';
+                } else if (!emailInput.value.includes('@') || !emailInput.value.includes('.')) {
+                     errorP.textContent = 'Valid email daalein (e.g., user@example.com)';
+                } else {
+                    errorP.textContent = 'Success!';
+                    errorP.style.color = 'green';
+                }
+            });
+            
+            // Demo for Q13: Modal
+            const modal13 = document.getElementById('demo-modal-13');
+            const openBtn13 = document.getElementById('demo-open-13');
+            const closeBtn13 = document.getElementById('demo-close-13');
+            const modalContent13 = modal13.querySelector('.modal-content');
+
+            function openModal() {
+                modal13.classList.remove('hidden');
+                setTimeout(() => { 
+                    modal13.classList.remove('opacity-0');
+                    modalContent13.classList.remove('scale-95');
+                }, 10);
+            }
+            function closeModal() {
+                 modal13.classList.add('opacity-0');
+                 modalContent13.classList.add('scale-95');
+                setTimeout(() => { modal13.classList.add('hidden'); }, 300);
+            }
+            openBtn13.addEventListener('click', openModal);
+            closeBtn13.addEventListener('click', closeModal);
+            modal13.addEventListener('click', (e) => {
+                if (e.target === modal13) closeModal();
+            });
+
+            // Demo for Q14: onsubmit Password Validation
+            const demoForm14 = document.getElementById('demo-form-14');
+            demoForm14.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const passInput = document.getElementById('demo-pass-14');
+                const errorP14 = document.getElementById('demo-error-14');
+                errorP14.style.color = 'red';
+
+                if (passInput.value.length < 6) {
+                    errorP14.textContent = 'Password kam se kam 6 characters ka hona chahiye.';
+                } else {
+                    errorP14.textContent = 'Success!';
+                    errorP14.style.color = 'green';
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
+
